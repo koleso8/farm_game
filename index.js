@@ -129,7 +129,7 @@ window.onload = function () {
 
     // pipes
     pipeArray.forEach(pipe => {
-      pipe.x += velocityX;
+      pipe.x += velocityX + 100;
       context.drawImage(pipe.img, pipe.x, pipe.y, pipe.width, pipe.height);
 
       if (!pipe.passed && bird.x > pipe.x + pipe.width) {
