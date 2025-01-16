@@ -64,8 +64,8 @@ window.onload = function () {
       lvl_4: new Audio(),
       lvl_5: new Audio(),
     };
-    farp.lvl_1.src = `./assets/farp_1.mp3`;
-    farp.lvl_2.src = `./assets/farp_2.mp3`;
+    farp.lvl_1.src = `./assets/farp_2.mp3`;
+    farp.lvl_2.src = `./assets/farp_1.mp3`;
     farp.lvl_3.src = `./assets/farp_3.mp3`;
     farp.lvl_4.src = `./assets/farp_4.mp3`;
     farp.lvl_5.src = `./assets/farp_5.mp3`;
