@@ -2,12 +2,13 @@ body {
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #game {
   background-color: rgb(195, 203, 111);
-  width: auto;
-  height: auto;
+  width: 414px;
   touch-action: manipulation;
-  overflow: hidden;
 }
