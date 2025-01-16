@@ -1,0 +1,12 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin: 0;
+}
+
+#game {
+  background-color: rgb(195, 203, 111);
+  width: 414px;
+  height: auto;
+  touch-action: manipulation;
+}
