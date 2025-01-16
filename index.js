@@ -41,10 +41,10 @@ let topHeightImage;
 let bottomHeightImage;
 
 // physics
-let velocityX = -6;
+let velocityX = -1;
 let velocityY = 0; // bird jump speed;
 // let gravity = 0.05; //TODO
-let gravity = 0.25;
+let gravity = 0.35;
 
 window.onload = function () {
   board = document.getElementById('game');
@@ -188,11 +188,26 @@ window.onload = function () {
 
     birdImage = birdImages.clicked;
 
-    if (score <= 10) farp.lvl_1.play();
-    if (score > 10 && score <= 20) farp.lvl_2.play();
-    if (score > 20 && score <= 30) farp.lvl_3.play();
-    if (score > 30 && score <= 40) farp.lvl_4.play();
-    if (score > 40) farp.lvl_5.play();
+    if (score <= 10) {
+      farp.lvl_1.play();
+      velocityX = -1;
+    }
+    if (score > 10 && score <= 20) {
+      farp.lvl_2.play();
+      velocityX = -2;
+    }
+    if (score > 20 && score <= 30) {
+      farp.lvl_3.play();
+      velocityX = -3;
+    }
+    if (score > 30 && score <= 40) {
+      farp.lvl_4.play();
+      velocityX = -4;
+    }
+    if (score > 40) {
+      farp.lvl_5.play();
+      velocityX = -5;
+    }
 
     setTimeout(() => {
       birdImage = birdImages.normal;
