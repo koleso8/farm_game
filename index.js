@@ -41,7 +41,7 @@ let topHeightImage;
 let bottomHeightImage;
 
 // physics
-let velocityX = -2;
+let velocityX = -6;
 let velocityY = 0; // bird jump speed;
 let gravity = 0.1; //TODO
 // let gravity = 0.25;
