@@ -1,6 +1,6 @@
 let board;
-let boardWidth = 375;
-let boardHeight = 667;
+let boardWidth = 414;
+let boardHeight = window.innerHeight;
 let context;
 
 const WIDTH_MULTI = boardWidth / 360;
@@ -184,7 +184,6 @@ window.onload = function () {
   }
 
   function moveBird() {
-    // velocityY = -3 - gravity; //TODO
     velocityY = -6 - gravity;
 
     birdImage = birdImages.clicked;

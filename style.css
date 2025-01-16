@@ -9,6 +9,6 @@ body {
 
 #game {
   background-color: rgb(195, 203, 111);
-  width: 414px;
+  width: 100vw;
   touch-action: manipulation;
 }
