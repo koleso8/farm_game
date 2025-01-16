@@ -18,6 +18,7 @@ let farp;
 
 let birdImages = { normal: new Image(), clicked: new Image() };
 birdImages.normal.src = './assets/out.png';
+
 birdImages.clicked.src = './assets/outpuk.png';
 
 let gameOver = false;
@@ -41,7 +42,7 @@ let topHeightImage;
 let bottomHeightImage;
 
 // physics
-let velocityX = -1;
+let velocityX = -2;
 let velocityY = 0; // bird jump speed;
 // let gravity = 0.05; //TODO
 let gravity = 0.35;
@@ -57,6 +58,13 @@ window.onload = function () {
   // draw background
   const background = new Image();
   background.src = './assets/flappybirdbg.png';
+  const backgroundBottom = {
+    bg_1: new Image(),
+    bg_2: new Image(),
+  };
+  backgroundBottom.bg_1.src = './assets/flappybirdbgbottom.png';
+  backgroundBottom.bg_2.src = './assets/flappybirdbgbottom2.png';
+  const backgroundBottoms = backgroundBottom.bg_1;
 
   background.onload = function () {
     context.drawImage(background, 0, 0, boardWidth, boardHeight);
@@ -77,7 +85,7 @@ window.onload = function () {
     birdImage = birdImages.normal;
 
     birdImage.onload = function () {
-      context.drawImage(birdImage.src, bird.x, bird.y, bird.width, bird.height);
+      context.drawImage(birdImage, bird.x, bird.y, bird.width, bird.height);
     };
 
     topHeightImage = new Image();
@@ -121,6 +129,7 @@ window.onload = function () {
     // bird
     velocityY += gravity;
     bird.y = Math.max(bird.y + velocityY, 0);
+
     context.drawImage(birdImage, bird.x, bird.y, bird.width, bird.height);
 
     if (bird.y >= boardHeight - bird.height) {
@@ -131,6 +140,8 @@ window.onload = function () {
     pipeArray.forEach(pipe => {
       pipe.x += velocityX - 2;
       context.drawImage(pipe.img, pipe.x, pipe.y, pipe.width, pipe.height);
+
+      context.drawImage(backgroundBottoms, 0, 0, boardWidth, boardHeight); //TODO
 
       if (!pipe.passed && bird.x > pipe.x + pipe.width) {
         pipe.passed = true;
@@ -184,7 +195,7 @@ window.onload = function () {
   }
 
   function moveBird() {
-    velocityY = -6 - gravity;
+    velocityY = -5 - gravity;
 
     birdImage = birdImages.clicked;
 
