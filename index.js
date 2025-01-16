@@ -1,6 +1,6 @@
 let board;
 let boardWidth = 414;
-let boardHeight = 667;
+let boardHeight = window.innerHeight;
 let context;
 
 const WIDTH_MULTI = boardWidth / 360;
