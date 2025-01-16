@@ -43,8 +43,8 @@ let bottomHeightImage;
 // physics
 let velocityX = -6;
 let velocityY = 0; // bird jump speed;
-// let gravity = 0.1; //TODO
-let gravity = 0.25;
+let gravity = 0.05; //TODO
+// let gravity = 0.25;
 
 window.onload = function () {
   board = document.getElementById('game');
