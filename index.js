@@ -1,6 +1,6 @@
 let board;
 let boardWidth = 414;
-let boardHeight = window.innerHeight;
+let boardHeight = 667;
 let context;
 
 const WIDTH_MULTI = boardWidth / 360;
@@ -43,8 +43,8 @@ let bottomHeightImage;
 // physics
 let velocityX = -2;
 let velocityY = 0; // bird jump speed;
-// let gravity = 0.1;//TODO
-let gravity = 0.25;
+let gravity = 0.1; //TODO
+// let gravity = 0.25;
 
 window.onload = function () {
   board = document.getElementById('game');
@@ -87,8 +87,7 @@ window.onload = function () {
   };
 
   requestAnimationFrame(update);
-  // setInterval(placePipes, 1300);//TODO
-  setInterval(placePipes, 1000);
+  setInterval(placePipes, 1300); //TODO
   document.addEventListener('click', moveBird);
 
   function update() {
@@ -185,8 +184,8 @@ window.onload = function () {
   }
 
   function moveBird() {
-    // velocityY = -3 - gravity;//TODO
-    velocityY = -6 - gravity;
+    velocityY = -3 - gravity; //TODO
+    // velocityY = -6 - gravity;
 
     birdImage = birdImages.clicked;
 

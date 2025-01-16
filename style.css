@@ -6,7 +6,8 @@ body {
 
 #game {
   background-color: rgb(195, 203, 111);
-  width: 414px;
+  width: auto;
   height: auto;
   touch-action: manipulation;
+  overflow: hidden;
 }
