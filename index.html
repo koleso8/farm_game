@@ -12,7 +12,33 @@
     />
   </head>
   <body>
-    <canvas id="canvas" width="276" height="414"></canvas>
+    <section class="gameWrapper">
+      <canvas id="canvas" width="276" height="414"></canvas>
+
+      <div class="liderBoard">
+        <button id="liderBoardOpenButton" class="liderBoardOpenButton button">
+          L
+        </button>
+      </div>
+
+      <div id="liderBoardWrapper" class="liderBoardWrapper">
+        <div style="position: relative">
+          <div style="position: absolute; top: 17px; right: 17px">
+            <button
+              id="liderBoardCloseButton"
+              class="liderBoardOpenButton button"
+            >
+              X
+            </button>
+          </div>
+        </div>
+        <div class="wrapp">
+          <h2 class="menuTitle">Top Farters</h2>
+          <ul id="menuList" class="menuList"></ul>
+        </div>
+      </div>
+    </section>
     <script src="game.js"></script>
+    <script src="liderBoard.js"></script>
   </body>
 </html>
