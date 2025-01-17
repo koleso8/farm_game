@@ -1,8 +1,8 @@
 const RAD = Math.PI / 180;
-const scrn = document.getElementById("canvas");
-const sctx = scrn.getContext("2d");
+const scrn = document.getElementById('canvas');
+const sctx = scrn.getContext('2d');
 scrn.tabIndex = 1;
-scrn.addEventListener("click", () => {
+scrn.addEventListener('click', () => {
   switch (state.curr) {
     case state.getReady:
       state.curr = state.Play;
@@ -87,7 +87,7 @@ const bg = {
 const pipe = {
   top: { sprite: new Image() },
   bot: { sprite: new Image() },
-  gap: 85,
+  gap: 100,
   moved: true,
   pipes: [],
   draw: function () {
@@ -109,7 +109,7 @@ const pipe = {
         y: -210 * Math.min(Math.random() + 1, 1.8),
       });
     }
-    this.pipes.forEach((pipe) => {
+    this.pipes.forEach(pipe => {
       pipe.x -= dx;
     });
 
@@ -253,25 +253,25 @@ const UI = {
     this.drawScore();
   },
   drawScore: function () {
-    sctx.fillStyle = "#FFFFFF";
-    sctx.strokeStyle = "#000000";
+    sctx.fillStyle = '#FFFFFF';
+    sctx.strokeStyle = '#000000';
     switch (state.curr) {
       case state.Play:
-        sctx.lineWidth = "2";
-        sctx.font = "35px Squada One";
+        sctx.lineWidth = '2';
+        sctx.font = '35px Squada One';
         sctx.fillText(this.score.curr, scrn.width / 2 - 5, 50);
         sctx.strokeText(this.score.curr, scrn.width / 2 - 5, 50);
         break;
       case state.gameOver:
-        sctx.lineWidth = "2";
-        sctx.font = "40px Squada One";
+        sctx.lineWidth = '2';
+        sctx.font = '40px Squada One';
         let sc = `SCORE :     ${this.score.curr}`;
         try {
           this.score.best = Math.max(
             this.score.curr,
-            localStorage.getItem("best")
+            localStorage.getItem('best')
           );
-          localStorage.setItem("best", this.score.best);
+          localStorage.setItem('best', this.score.best);
           let bs = `BEST  :     ${this.score.best}`;
           sctx.fillText(sc, scrn.width / 2 - 80, scrn.height / 2 + 0);
           sctx.strokeText(sc, scrn.width / 2 - 80, scrn.height / 2 + 0);
@@ -292,23 +292,23 @@ const UI = {
   },
 };
 
-gnd.sprite.src = "img/ground.png";
-bg.sprite.src = "img/BG.png";
-pipe.top.sprite.src = "img/toppipe.png";
-pipe.bot.sprite.src = "img/botpipe.png";
-UI.gameOver.sprite.src = "img/go.png";
-UI.getReady.sprite.src = "img/getready.png";
-UI.tap[0].sprite.src = "img/tap/t0.png";
-UI.tap[1].sprite.src = "img/tap/t1.png";
-bird.animations[0].sprite.src = "img/bird/b0.png";
-bird.animations[1].sprite.src = "img/bird/b1.png";
-bird.animations[2].sprite.src = "img/bird/b2.png";
-bird.animations[3].sprite.src = "img/bird/b0.png";
-SFX.start.src = "sfx/start.wav";
-SFX.flap.src = "sfx/flap.wav";
-SFX.score.src = "sfx/score.wav";
-SFX.hit.src = "sfx/hit.wav";
-SFX.die.src = "sfx/die.wav";
+gnd.sprite.src = 'img/ground.png';
+bg.sprite.src = 'img/BG.png';
+pipe.top.sprite.src = 'img/toppipe.png';
+pipe.bot.sprite.src = 'img/botpipe.png';
+UI.gameOver.sprite.src = 'img/go.png';
+UI.getReady.sprite.src = 'img/getready.png';
+UI.tap[0].sprite.src = 'img/tap/t0.png';
+UI.tap[1].sprite.src = 'img/tap/t1.png';
+bird.animations[0].sprite.src = 'img/bird/b0.png';
+bird.animations[1].sprite.src = 'img/bird/b1.png';
+bird.animations[2].sprite.src = 'img/bird/b2.png';
+bird.animations[3].sprite.src = 'img/bird/b0.png';
+SFX.start.src = 'sfx/start.wav';
+SFX.flap.src = 'sfx/flap.wav';
+SFX.score.src = 'sfx/score.wav';
+SFX.hit.src = 'sfx/hit.wav';
+SFX.die.src = 'sfx/die.wav';
 
 function gameLoop() {
   update();
@@ -324,7 +324,7 @@ function update() {
 }
 
 function draw() {
-  sctx.fillStyle = "#30c0df";
+  sctx.fillStyle = '#30c0df';
   sctx.fillRect(0, 0, scrn.width, scrn.height);
   bg.draw();
   pipe.draw();
