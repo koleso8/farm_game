@@ -1,14 +1,12 @@
-body {
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#game {
-  background-color: rgb(195, 203, 111);
+#canvas {
+  background-color: #30c0df;
+  border: 2px solid black;
+  display: block;
+  padding: auto;
   width: 100vw;
-  touch-action: manipulation;
+  max-width: 600px;
+  height: auto;
+}
+body {
+  margin: 0;
 }
