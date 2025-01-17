@@ -143,7 +143,7 @@ const bird = {
     sctx.restore();
   },
   update: function () {
-    let r = parseFloat(this.animations[0].sprite.width) / 2;
+    let r = parseFloat(this.animations[0].sprite.width) / 4;
     switch (state.curr) {
       case state.getReady:
         this.rotatation = 0;
@@ -155,6 +155,7 @@ const bird = {
         this.y += this.speed;
         this.setRotation();
         this.speed += this.gravity;
+
         if (this.y + r >= gnd.y || this.collisioned()) {
           state.curr = state.gameOver;
         }
@@ -196,12 +197,15 @@ const bird = {
   collisioned: function () {
     if (!pipe.pipes.length) return;
     let bird = this.animations[0].sprite;
+
     let x = pipe.pipes[0].x;
     let y = pipe.pipes[0].y;
     let r = bird.height / 4 + bird.width / 4;
     let roof = y + parseFloat(pipe.top.sprite.height);
     let floor = roof + pipe.gap;
     let w = parseFloat(pipe.top.sprite.width);
+    console.log(w);
+
     if (this.x + r >= x) {
       if (this.x + r < x + w) {
         if (this.y - r <= roof || this.y + r >= floor) {
