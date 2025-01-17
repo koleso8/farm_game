@@ -232,20 +232,20 @@ const UI = {
   draw: function () {
     switch (state.curr) {
       case state.getReady:
-        this.y = parseFloat(scrn.height - this.getReady.sprite.height) / 2;
+        this.y = parseFloat(scrn.height - this.getReady.sprite.height) / 4;
         this.x = parseFloat(scrn.width - this.getReady.sprite.width) / 2;
         this.tx = parseFloat(scrn.width - this.tap[0].sprite.width) / 2;
         this.ty =
-          this.y + this.getReady.sprite.height - this.tap[0].sprite.height;
+          this.y + this.getReady.sprite.height - this.tap[0].sprite.height + 40;
         sctx.drawImage(this.getReady.sprite, this.x, this.y);
         sctx.drawImage(this.tap[this.frame].sprite, this.tx, this.ty);
         break;
       case state.gameOver:
-        this.y = parseFloat(scrn.height - this.gameOver.sprite.height) / 2;
+        this.y = parseFloat(scrn.height - this.gameOver.sprite.height) / 9;
         this.x = parseFloat(scrn.width - this.gameOver.sprite.width) / 2;
         this.tx = parseFloat(scrn.width - this.tap[0].sprite.width) / 2;
         this.ty =
-          this.y + this.gameOver.sprite.height - this.tap[0].sprite.height;
+          this.y + this.gameOver.sprite.height - this.tap[0].sprite.height / 2;
         sctx.drawImage(this.gameOver.sprite, this.x, this.y);
         sctx.drawImage(this.tap[this.frame].sprite, this.tx, this.ty);
         break;
@@ -273,10 +273,10 @@ const UI = {
           );
           localStorage.setItem('best', this.score.best);
           let bs = `BEST  :     ${this.score.best}`;
-          sctx.fillText(sc, scrn.width / 2 - 80, scrn.height / 2 + 0);
-          sctx.strokeText(sc, scrn.width / 2 - 80, scrn.height / 2 + 0);
-          sctx.fillText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
-          sctx.strokeText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
+          sctx.fillText(sc, scrn.width / 2 - 80, scrn.height / 2 + 20);
+          sctx.strokeText(sc, scrn.width / 2 - 80, scrn.height / 2 + 20);
+          sctx.fillText(bs, scrn.width / 2 - 80, scrn.height / 2 + 50);
+          sctx.strokeText(bs, scrn.width / 2 - 80, scrn.height / 2 + 50);
         } catch (e) {
           sctx.fillText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
           sctx.strokeText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
@@ -324,7 +324,7 @@ function update() {
 }
 
 function draw() {
-  sctx.fillStyle = '#30c0df';
+  sctx.fillStyle = '#cdf652';
   sctx.fillRect(0, 0, scrn.width, scrn.height);
   bg.draw();
   pipe.draw();
