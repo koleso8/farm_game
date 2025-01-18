@@ -101,8 +101,9 @@ body {
 }
 
 .liderBoardWrapper {
-  font-family: cursive;
-  font-weight: 900;
+  font-family: 'Rubik Bubbles', serif;
+  font-weight: 400;
+  color: #403500;
   backdrop-filter: blur(20px);
   position: absolute;
   z-index: 4;
