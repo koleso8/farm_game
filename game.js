@@ -204,7 +204,6 @@ const bird = {
     let roof = y + parseFloat(pipe.top.sprite.height);
     let floor = roof + pipe.gap;
     let w = parseFloat(pipe.top.sprite.width);
-    console.log(w);
 
     if (this.x + r >= x) {
       if (this.x + r < x + w) {
