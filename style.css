@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Aubette';
+  src: url('font/Aubette.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 #canvas {
   background-color: #cdf652;
   border: 2px solid black;
@@ -11,6 +18,8 @@ body {
   width: 100vw;
   max-width: 600px;
   margin: 0;
+  font-family: 'Aubette', sans-serif;
+  text-transform: uppercase;
 }
 .gameWrapper {
   position: relative;
@@ -23,9 +32,6 @@ body {
   box-shadow: inset;
   width: 60px;
   height: 60px;
-  border: 1px solid greenyellow;
-  border-radius: 12px;
-  background-color: #cdf652;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +107,7 @@ body {
 }
 
 .liderBoardWrapper {
-  font-family: 'Rubik Bubbles', serif;
+  font-family: 'Aubette';
   font-weight: 400;
   color: #403500;
   backdrop-filter: blur(20px);
