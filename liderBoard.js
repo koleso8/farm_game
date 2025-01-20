@@ -3,8 +3,8 @@ const closeButton = document.getElementById('liderBoardCloseButton');
 const menu = document.getElementById('liderBoardWrapper');
 const menuList = document.getElementById('menuList');
 const users = [
-  { name: 'King', points: 450 },
-  { name: 'User2a', points: 400 },
+  { name: 'Frak', points: 450 },
+  { name: 'Valentyai', points: 400 },
   { name: 'tolik33', points: 388 },
   { name: 'fima', points: 360 },
   { name: 'SANYA', points: 304 },
