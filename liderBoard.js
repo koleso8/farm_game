@@ -5,14 +5,14 @@ const menuList = document.getElementById('menuList');
 const users = [
   { name: 'Frak', points: 450 },
   { name: 'Valentyai', points: 400 },
-  { name: 'tolik33', points: 388 },
-  { name: 'fima', points: 360 },
+  { name: 'Koleso', points: 388 },
+  { name: 'Yarik', points: 360 },
   { name: 'SANYA', points: 304 },
   { name: 'Nicolai', points: 298 },
-  { name: '120445245', points: 290 },
+  { name: '120445', points: 290 },
   { name: 'tigr', points: 287 },
-  { name: 'lev', points: 277 },
-  { name: 'auf', points: 268 },
+  { name: 'user454', points: 277 },
+  { name: 'aufer', points: 268 },
 ];
 
 const handleOpen = () => {
