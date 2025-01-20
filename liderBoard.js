@@ -3,16 +3,16 @@ const closeButton = document.getElementById('liderBoardCloseButton');
 const menu = document.getElementById('liderBoardWrapper');
 const menuList = document.getElementById('menuList');
 const users = [
-  { name: 'King', points: 78 },
-  { name: 'User2a', points: 72 },
-  { name: 'tolik33', points: 68 },
-  { name: 'fima', points: 60 },
-  { name: 'Саня', points: 55 },
-  { name: 'Nicolai', points: 34 },
-  { name: '120445245', points: 30 },
-  { name: 'tigr', points: 29 },
-  { name: 'lev', points: 20 },
-  { name: 'auf', points: 10 },
+  { name: 'King', points: 450 },
+  { name: 'User2a', points: 400 },
+  { name: 'tolik33', points: 388 },
+  { name: 'fima', points: 360 },
+  { name: 'SANYA', points: 304 },
+  { name: 'Nicolai', points: 298 },
+  { name: '120445245', points: 290 },
+  { name: 'tigr', points: 287 },
+  { name: 'lev', points: 277 },
+  { name: 'auf', points: 268 },
 ];
 
 const handleOpen = () => {

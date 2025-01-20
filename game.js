@@ -18,6 +18,7 @@ scrn.addEventListener('click', () => {
       pipe.pipes = [];
       UI.score.curr = 0;
       SFX.played = false;
+      dx = 2;
       break;
   }
 });
@@ -212,6 +213,9 @@ const bird = {
           return true;
         }
       } else if (pipe.moved) {
+        console.log(`speed = ${dx}`);
+        dx += 0.2;
+
         UI.score.curr++;
         SFX.score.play();
         pipe.moved = false;
