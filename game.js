@@ -279,6 +279,17 @@ const UI = {
             localStorage.getItem('best')
           );
           localStorage.setItem('best', this.score.best);
+
+          const url = `http://localhost:3000/highscore/${this.score.best}`;
+          fetch(url, {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+          })
+            .then(response => response.json())
+            .then(data => {
+              console.log('Success:', data);
+            });
+
           let bs = `BEST  :     ${this.score.best}`;
           sctx.fillText(sc, scrn.width / 2 - 80, scrn.height / 2 + 20);
           sctx.strokeText(sc, scrn.width / 2 - 80, scrn.height / 2 + 20);
