@@ -14,7 +14,7 @@ scrn.addEventListener('click', () => {
     case state.gameOver:
       state.curr = state.getReady;
       bird.speed = 0;
-      bird.y = 76;
+      bird.y = 100;
       pipe.pipes = [];
       UI.score.curr = 0;
       SFX.played = false;
@@ -37,7 +37,7 @@ scrn.onkeydown = function keyDown(e) {
       case state.gameOver:
         state.curr = state.getReady;
         bird.speed = 0;
-        bird.y = 76;
+        bird.y = 100;
         pipe.pipes = [];
         UI.score.curr = 0;
         SFX.played = false;
@@ -137,9 +137,11 @@ const bird = {
   draw: function () {
     let h = this.animations[this.frame].sprite.height;
     let w = this.animations[this.frame].sprite.width;
+
     sctx.save();
     sctx.translate(this.x, this.y);
     sctx.rotate(this.rotatation * RAD);
+    sctx.scale(0.1, 0.1);
     sctx.drawImage(this.animations[this.frame].sprite, -w / 2, -h / 2);
     sctx.restore();
   },
@@ -157,7 +159,7 @@ const bird = {
         this.setRotation();
         this.speed += this.gravity;
 
-        if (this.y + r >= gnd.y || this.collisioned()) {
+        if (this.y + r >= gnd.y + 110 || this.collisioned()) {
           state.curr = state.gameOver;
           // handleOpenMenu();
         }
@@ -165,13 +167,13 @@ const bird = {
         break;
       case state.gameOver:
         this.frame = 1;
-        if (this.y + r < gnd.y) {
+        if (this.y + r < gnd.y + 110) {
           this.y += this.speed;
           this.setRotation();
           this.speed += this.gravity * 2;
         } else {
           this.speed = 0;
-          this.y = gnd.y - r;
+          this.y = gnd.y + 110 - r;
           this.rotatation = 90;
           if (!SFX.played) {
             SFX.die.play();
@@ -202,7 +204,7 @@ const bird = {
 
     let x = pipe.pipes[0].x;
     let y = pipe.pipes[0].y;
-    let r = bird.height / 4 + bird.width / 4;
+    let r = (bird.height / 4 + bird.width / 4) * 0.08;
     let roof = y + parseFloat(pipe.top.sprite.height);
     let floor = roof + pipe.gap;
     let w = parseFloat(pipe.top.sprite.width);
