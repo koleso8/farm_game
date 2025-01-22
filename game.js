@@ -159,6 +159,7 @@ const bird = {
 
         if (this.y + r >= gnd.y || this.collisioned()) {
           state.curr = state.gameOver;
+          // handleOpenMenu();
         }
 
         break;
