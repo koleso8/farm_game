@@ -14,7 +14,7 @@ scrn.addEventListener('click', () => {
     case state.gameOver:
       state.curr = state.getReady;
       bird.speed = 0;
-      bird.y = 100;
+      bird.y = 76;
       pipe.pipes = [];
       UI.score.curr = 0;
       SFX.played = false;
@@ -37,7 +37,7 @@ scrn.onkeydown = function keyDown(e) {
       case state.gameOver:
         state.curr = state.getReady;
         bird.speed = 0;
-        bird.y = 100;
+        bird.y = 76;
         pipe.pipes = [];
         UI.score.curr = 0;
         SFX.played = false;
@@ -214,7 +214,7 @@ const bird = {
         }
       } else if (pipe.moved) {
         console.log(`speed = ${dx}`);
-        dx += 0.2;
+        dx += 0.1;
 
         UI.score.curr++;
         SFX.score.play();
@@ -279,16 +279,6 @@ const UI = {
             localStorage.getItem('best')
           );
           localStorage.setItem('best', this.score.best);
-
-          const url = `http://localhost:3000/highscore/${this.score.best}`;
-          fetch(url, {
-            method: 'GET',
-            headers: { 'Content-Type': 'application/json' },
-          })
-            .then(response => response.json())
-            .then(data => {
-              console.log('Success:', data);
-            });
 
           let bs = `BEST  :     ${this.score.best}`;
           sctx.fillText(sc, scrn.width / 2 - 80, scrn.height / 2 + 20);
