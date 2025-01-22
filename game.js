@@ -227,7 +227,7 @@ const bird = {
 async function sendHighscore(score) {
   try {
     const response = await fetch(`http://localhost:3000/highscore/${score}`, {
-      method: 'POST',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
