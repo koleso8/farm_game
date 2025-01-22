@@ -224,24 +224,6 @@ const bird = {
   },
 };
 
-async function sendHighscore(score) {
-  try {
-    const response = await fetch(`http://localhost:3000/highscore/${score}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ score: score }),
-    });
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    console.log('Highscore successfully sent:', data);
-  } catch (error) {
-    console.error('Error sending highscore:', error);
-  }
-}
 const UI = {
   getReady: { sprite: new Image() },
   gameOver: { sprite: new Image() },
@@ -298,7 +280,6 @@ const UI = {
             localStorage.getItem('best')
           );
           localStorage.setItem('best', this.score.best);
-          sendHighscore(this.score.best);
           let bs = `BEST  :     ${this.score.best}`;
           sctx.fillText(sc, scrn.width / 2 - 80, scrn.height / 2 + 20);
           sctx.strokeText(sc, scrn.width / 2 - 80, scrn.height / 2 + 20);
@@ -308,7 +289,6 @@ const UI = {
           sctx.fillText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
           sctx.strokeText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
         }
-
         break;
     }
   },
