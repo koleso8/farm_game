@@ -45,17 +45,54 @@
 
       <div id="walletWrapper" class="walletWrapper">
         <button id="openSolana" class="openSolana">
-          <img src="./img/Raydium-White-Logo-PNG.png" width="40" alt="" />
+          <img src="./img/Solana_logo.png" width="60" alt="" />
         </button>
         <div id="solanaMenu" class="solanaMenu">
-          <form id="walletForm" class="walletForm">
+          <form id="walletForm" class="walletForm brutalist-card">
+            <div class="brutalist-card__header">
+              <div class="brutalist-card__alert">
+                Congratulations, you have earned points
+              </div>
+            </div>
             <input
               placeholder="Enter your solana address"
               class="input"
               name="text"
               type="text"
             />
-            <button type="submit" id="shareScore">shareScore</button>
+            <!-- <button type="submit" id="shareScore">shareScore</button> -->
+            <div class="brutalist-card__actions">
+              <button
+                type="submit"
+                id="shareScore"
+                class="brutalist-card__button brutalist-card__button--read"
+              >
+                Share score
+              </button>
+            </div>
+          </form>
+        </div>
+        <div id="addWalletMenu" class="addWalletMenu">
+          <form id="addWalletMenuForm" class="addWalletMenuForm brutalist-card">
+            <div class="brutalist-card__header">
+              <div class="brutalist-card__alert">
+                Enter your Solana wallet address
+              </div>
+            </div>
+            <input
+              id="inputWalletField"
+              placeholder="Enter your solana address"
+              class="input"
+              name="text"
+              type="text"
+            />
+            <button
+              type="submit"
+              id="addWalletButton "
+              class="brutalist-card__button brutalist-card__button--read"
+            >
+              ADD WALLET
+            </button>
           </form>
         </div>
       </div>

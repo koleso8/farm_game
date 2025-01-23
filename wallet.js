@@ -1,10 +1,35 @@
 const openSolana = document.getElementById('openSolana');
 const SolanaMenu = document.getElementById('solanaMenu');
+const addWalletMenu = document.getElementById('addWalletMenu');
 const walletForm = document.getElementById('walletForm');
+const addWalletMenuForm = document.getElementById('addWalletMenuForm');
 const shareScoreBtn = document.getElementById('shareScore');
 const inputForm = document.querySelector('.input');
 const inputField = document.querySelector('.input');
+const inputWalletField = document.getElementById('inputWalletField');
+
 const wallet_id_Save = localStorage.getItem('wallet_id');
+
+let previousValue = parseInt(localStorage.getItem('best'));
+
+function roundDownToNearestTen(num) {
+  return Math.floor(num / 10) * 10;
+}
+
+function checkLocalStorage() {
+  const currentValue = parseInt(localStorage.getItem('best'));
+
+  if (isNaN(currentValue)) previousValue = 0;
+  if (currentValue > previousValue && currentValue >= 2) {
+    console.log(currentValue);
+
+    previousValue = currentValue;
+    handleCloseWalletMenu();
+    handleOpenMenu();
+  }
+}
+
+setInterval(checkLocalStorage, 1000); // Проверка каждую секунду
 
 const saveToLocalStorage = event => {
   const inputValue = event.target.value;
@@ -12,9 +37,10 @@ const saveToLocalStorage = event => {
 };
 
 inputField.addEventListener('input', saveToLocalStorage);
+inputWalletField.addEventListener('input', saveToLocalStorage);
 
 async function sendHighscore() {
-  const score = localStorage.getItem('best');
+  const score = roundDownToNearestTen(parseInt(localStorage.getItem('best')));
   const wallet_id = localStorage.getItem('wallet_id');
 
   try {
@@ -36,15 +62,22 @@ async function sendHighscore() {
 inputForm.value = wallet_id_Save;
 
 const handleOpenMenu = () => {
+  console.log('handleOpenMenu');
+
   SolanaMenu.classList.add('isOpen');
+};
+const handleOpenWalletMenu = () => {
+  addWalletMenu.classList.add('isOpen');
+};
+const handletoggleWalletMenu = () => {
+  addWalletMenu.classList.toggle('isOpen');
 };
 
 const handleCloseMenu = () => {
   SolanaMenu.classList.remove('isOpen');
 };
-
-const handleToggleMenu = () => {
-  SolanaMenu.classList.toggle('isOpen');
+const handleCloseWalletMenu = () => {
+  addWalletMenu.classList.remove('isOpen');
 };
 
 const onSubmitForm = event => {
@@ -53,7 +86,12 @@ const onSubmitForm = event => {
   sendHighscore();
   handleCloseMenu();
 };
+const onSubmitAddWalletForm = event => {
+  event.preventDefault();
+  handleCloseWalletMenu();
+};
 
 walletForm.addEventListener('submit', onSubmitForm);
+addWalletMenuForm.addEventListener('submit', onSubmitAddWalletForm);
 
-openSolana.addEventListener('click', handleToggleMenu);
+openSolana.addEventListener('click', handletoggleWalletMenu);
