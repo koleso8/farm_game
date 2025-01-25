@@ -4,6 +4,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Zantiqa';
+  src: url('font/Zantiqa.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 #canvas {
   background-color: #cdf652;
@@ -35,7 +41,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
 }
 
 .button {
@@ -108,7 +113,8 @@ body {
 }
 
 .liderBoardWrapper {
-  font-family: 'Aubette';
+  font-family: 'Zantiqa';
+  text-transform: none;
   font-weight: 400;
   letter-spacing: 1px;
   color: #fffef9;
@@ -134,23 +140,23 @@ body {
   font-size: 50px;
   letter-spacing: 2px;
 }
-
 .menuList {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   list-style: decimal;
+  font-size: 6px;
   :first-child {
-    font-size: 30px;
-    text-decoration: 4px solid underline;
+    font-size: 9px;
+    text-decoration: 1px solid underline;
   }
   :nth-child(2) {
-    font-size: 25px;
+    font-size: 8px;
   }
 
   :nth-child(3) {
-    font-size: 20px;
+    font-size: 7px;
   }
 }
 
@@ -170,8 +176,8 @@ body {
 .openSolana {
   background-color: transparent;
   border: none;
-  padding-left: 20px;
-  padding-top: 70px;
+  padding-left: 10px;
+  padding-top: 60px;
 }
 
 .solanaMenu {

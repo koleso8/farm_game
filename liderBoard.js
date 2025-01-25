@@ -3,16 +3,16 @@ const closeButton = document.getElementById('liderBoardCloseButton');
 const menu = document.getElementById('liderBoardWrapper');
 const menuList = document.getElementById('menuList');
 const users = [
-  { name: 'Frak', points: 119 },
-  { name: 'Valentyai', points: 105 },
-  { name: 'Koleso', points: 93 },
-  { name: 'Yarik', points: 91 },
-  { name: 'SANYA', points: 84 },
-  { name: 'Nicolai', points: 80 },
-  { name: '120445', points: 77 },
-  { name: 'tigr', points: 76 },
-  { name: 'user454', points: 74 },
-  { name: 'aufer', points: 70 },
+  { name: 'GmUjmtrM6aHyPTEJs6GWXUVBG8XTFKPQdNZfLDKUVsoy' },
+  { name: 'GoUSidwGAY5ZDmch6mQppCgvz2ERJan8drH9JMWMhP5K' },
+  { name: 'BiSx4vbuc4D2uEpMHib5f63tL42h6Nndpy7Jnc2MwMBv' },
+  { name: 'CiCuGTuKYP53L7HSKNHX5VgWGeQE2i1WPKMxA58GESF2' },
+  { name: 'EUrZxKi5AYmAnJDBiq3hCqqFYyg84mGdC8msS6yrpWo6' },
+  { name: 'AcyP65mDg8rKCTrb9dUzyzVxJ6BF8fCvjdJ9cRqpdVoD' },
+  { name: '2mqSxxA3t18H5nJ7KpeHcnkuGNRYRQZ3aKYLNhVfDEm1' },
+  { name: 'ArpWiHxGKquR4eST6YiUEdMZvYsCPbBg1UV2zKbQLaso' },
+  { name: '75JcsmfHGqPth5nEFV7ZztxBhkN5tLCg8HhT16eJqaYN' },
+  { name: '4yBaS8rVpAjebHcZ5aqXFAz6BabWgGPSx7ZqBtKYcNBq' },
 ];
 
 const handleOpen = () => {
@@ -24,7 +24,7 @@ const handleClose = () => {
 const renderUsersList = users => {
   users.forEach(user => {
     const listItem = document.createElement('li');
-    listItem.textContent = `${user.name} - ${user.points} score`;
+    listItem.textContent = `${user.name}`;
     menuList.appendChild(listItem);
   });
 };
