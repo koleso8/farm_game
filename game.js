@@ -107,7 +107,7 @@ const pipe = {
     if (frames % 100 == 0) {
       this.pipes.push({
         x: parseFloat(scrn.width),
-        y: -120 * Math.min(Math.random() + 1, 1.8),
+        y: -100 * Math.min(Math.random() + 1, 1.8),
       });
     }
     this.pipes.forEach(pipe => {
