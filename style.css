@@ -207,14 +207,15 @@ body {
   border: 2px solid white;
   border-radius: 5px;
   color: rgba(255, 255, 255, 0.731);
-  font-family: 'Aubette';
-  text-transform: uppercase;
+  font-family: 'Zantiqa';
+  text-transform: none;
 }
 
 .input:focus {
+  font-family: 'Zantiqa';
+  text-transform: none;
   color: rgb(255, 255, 255);
-  font-family: 'Aubette';
-  text-transform: uppercase;
+
   background-color: #212121;
   outline-color: rgb(255, 255, 255);
   transition-property: box-shadow;
