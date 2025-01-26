@@ -43,7 +43,7 @@ async function sendHighscore() {
   const wallet_id = localStorage.getItem('wallet_id');
   // const service = 'http://localhost:3000/sendScore';
   // const service = 'https://fartrump.ngrok.io/submit_score';
-  const service = 'https://lox-19k0.onrender.com/sendScore';
+  const service = 'https://lox-19k0.onrender.com';
   try {
     const response = await fetch(service, {
       method: 'POST',
