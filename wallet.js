@@ -8,9 +8,7 @@ const inputForm = document.querySelector('.input');
 const inputField = document.querySelector('.input');
 const inputWalletField = document.getElementById('inputWalletField');
 
-const iFrame = document.querySelector('game-frame');
-
-inputWalletField.onload(() => console.log(iFrame));
+const iFrame = window.querySelector('game-frame');
 
 const wallet_id_Save = localStorage.getItem('wallet_id');
 
