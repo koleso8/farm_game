@@ -9,9 +9,6 @@ const inputField = document.querySelector('.input');
 const inputWalletField = document.getElementById('inputWalletField');
 const wallet_id_Save = localStorage.getItem('wallet_id');
 
-const iframe = document.querySelector('.game-frame');
-iframe.contentWindow.postMessage('Hello from parent', '*');
-
 let previousValue = parseInt(localStorage.getItem('best'));
 
 function roundDownToNearestTen(num) {
