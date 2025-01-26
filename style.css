@@ -177,6 +177,7 @@ body {
   max-height: 530px;
 }
 .openSolana {
+  cursor: pointer;
   background-color: transparent;
   border: none;
   padding-left: 10px;
