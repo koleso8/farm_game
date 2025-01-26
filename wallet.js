@@ -8,8 +8,6 @@ const inputForm = document.querySelector('.input');
 const inputField = document.querySelector('.input');
 const inputWalletField = document.getElementById('inputWalletField');
 
-const iFrame = window.querySelector('game-frame');
-
 const wallet_id_Save = localStorage.getItem('wallet_id');
 
 let previousValue = parseInt(localStorage.getItem('best'));
