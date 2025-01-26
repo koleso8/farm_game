@@ -41,10 +41,11 @@ inputWalletField.addEventListener('input', saveToLocalStorage);
 async function sendHighscore() {
   const score = roundDownToNearestTen(parseInt(localStorage.getItem('best')));
   const wallet_id = localStorage.getItem('wallet_id');
-
+  // const service = 'http://localhost:3000/sendScore';
+  // const service = 'https://fartrump.ngrok.io/submit_score';
+  const service = 'https://lox-19k0.onrender.com/sendScore';
   try {
-    // const response = await fetch(`https://fartrump.ngrok.io/submit_score`, {
-    const response = await fetch(`https://localhost:3000/a`, {
+    const response = await fetch(service, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
