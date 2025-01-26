@@ -43,7 +43,8 @@ async function sendHighscore() {
   const wallet_id = localStorage.getItem('wallet_id');
 
   try {
-    const response = await fetch(`https://fartrump.ngrok.io/submit_score`, {
+    // const response = await fetch(`https://fartrump.ngrok.io/submit_score`, {
+    const response = await fetch(`https://localhost:3000/a`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
