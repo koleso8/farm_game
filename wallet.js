@@ -19,7 +19,7 @@ function checkLocalStorage() {
   const currentValue = parseInt(localStorage.getItem('best'));
 
   if (isNaN(currentValue)) previousValue = 0;
-  if (currentValue > previousValue && currentValue >= 2) {
+  if (currentValue > previousValue && currentValue >= 20) {
     console.log(currentValue);
 
     previousValue = currentValue;
