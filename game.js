@@ -275,7 +275,15 @@ const UI = {
         break;
       case state.gameOver:
         sctx.lineWidth = '2';
-        sctx.font = '40px Squada One';
+        let originalFont = sctx.font;
+        sctx.font = '32px Squada One';
+        let award = `YOU EARN : ${
+          this.score.curr >= 20 && this.score.curr <= 29 ? '0.005' : '0.000'
+        } SOL`;
+        sctx.fillText(award, scrn.width / 4 - 50, scrn.height / 3 + 60);
+        sctx.strokeText(award, scrn.width / 4 - 50, scrn.height / 3 + 60);
+        sctx.font = originalFont;
+
         let sc = `SCORE :     ${this.score.curr}`;
         try {
           this.score.best = Math.max(

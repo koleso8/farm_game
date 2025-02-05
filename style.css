@@ -149,17 +149,17 @@ body {
   align-items: center;
   gap: 20px;
   list-style: decimal;
-  font-size: 6px;
+  font-size: 14px;
   :first-child {
-    font-size: 9px;
+    font-size: 20px;
     text-decoration: 1px solid underline;
   }
   :nth-child(2) {
-    font-size: 8px;
+    font-size: 18px;
   }
 
   :nth-child(3) {
-    font-size: 7px;
+    font-size: 16px;
   }
 }
 
