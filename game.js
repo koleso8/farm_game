@@ -277,9 +277,30 @@ const UI = {
         sctx.lineWidth = '2';
         let originalFont = sctx.font;
         sctx.font = '32px Squada One';
-        let award = `YOU EARN : ${
-          this.score.curr >= 20 && this.score.curr <= 29 ? '0.005' : '0.000'
-        } SOL`;
+        let award;
+
+        if (this.score.curr >= 20 && this.score.curr <= 29) {
+          award = 'YOU EARN : 0.005 SOL';
+        } else if (this.score.curr >= 30 && this.score.curr <= 39) {
+          award = 'YOU EARN : 0.010 SOL';
+        } else if (this.score.curr >= 40 && this.score.curr <= 49) {
+          award = 'YOU EARN : 0.015 SOL';
+        } else if (this.score.curr >= 50 && this.score.curr <= 59) {
+          award = 'YOU EARN : 0.020 SOL';
+        } else if (this.score.curr >= 60 && this.score.curr <= 69) {
+          award = 'YOU EARN : 0.025 SOL';
+        } else if (this.score.curr >= 70 && this.score.curr <= 79) {
+          award = 'YOU EARN : 0.030 SOL';
+        } else if (this.score.curr >= 80 && this.score.curr <= 89) {
+          award = 'YOU EARN : 0.035 SOL';
+        } else if (this.score.curr >= 90 && this.score.curr <= 99) {
+          award = 'YOU EARN : 0.040 SOL';
+        } else if (this.score.curr >= 100) {
+          award = 'YOU EARN : 0.050 SOL';
+        } else {
+          award = 'YOU EARN : 0.000 SOL';
+        }
+
         sctx.fillText(award, scrn.width / 4 - 50, scrn.height / 3 + 60);
         sctx.strokeText(award, scrn.width / 4 - 50, scrn.height / 3 + 60);
         sctx.font = originalFont;
