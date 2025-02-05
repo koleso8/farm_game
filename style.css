@@ -45,7 +45,26 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+.info {
+  position: absolute;
+  top: 10px;
+  left: 80px;
+  box-shadow: inset;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infoOpenButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: 3px solid #008542;
+  font-size: 30px;
+  color: #008542;
+}
 .button {
   font-size: 18px;
   background-color: #008542;
@@ -135,6 +154,45 @@ body {
 .liderBoardWrapper.isOpen {
   opacity: 1;
   transform: translateX(0);
+}
+.infoWrapper {
+  font-family: 'Zantiqa';
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fffef9;
+  backdrop-filter: brightness(20%) blur(20px);
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all linear 0.5s;
+}
+
+.infoWrapper.isOpen {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.infoWrapper > .wrapp > .menuTitle {
+  padding-top: 50px;
+  font-size: 30px;
+  margin-bottom: 40px;
+  width: 90%;
+}
+.listInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  gap: 8px;
+  span {
+    width: 90%;
+    text-align: center;
+  }
 }
 
 .menuTitle {

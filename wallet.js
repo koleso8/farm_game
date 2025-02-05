@@ -92,6 +92,6 @@ const onSubmitAddWalletForm = event => {
 
 walletForm.addEventListener('submit', onSubmitForm);
 addWalletMenuForm.addEventListener('submit', onSubmitAddWalletForm); //TODO
-// addWalletMenuForm.addEventListener('submit', onSubmitForm);
+// addWalletMenuForm.addEventListener('submit', onSubmitForm);//проверка отправки запроса
 
 openSolana.addEventListener('click', handletoggleWalletMenu);

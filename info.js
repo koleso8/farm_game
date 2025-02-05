@@ -1,14 +1,13 @@
-const openButton = document.getElementById('liderBoardOpenButton');
-const closeButton = document.getElementById('liderBoardCloseButton');
-const menu = document.getElementById('liderBoardWrapper');
-const menuList = document.getElementById('menuList');
+const openInfoButton = document.getElementById('infoOpenButton');
+const closeInfoButton = document.getElementById('infoCloseButton');
+const infoWrapper = document.getElementById('infoWrapper');
 
-const handleOpen = () => {
-  menu.classList.add('isOpen');
+const handleOpenInfo = () => {
+  infoWrapper.classList.add('isOpen');
 };
-const handleClose = () => {
-  menu.classList.remove('isOpen');
+const handleCloseInfo = () => {
+  infoWrapper.classList.remove('isOpen');
 };
 
-openButton.addEventListener('click', handleOpen);
-closeButton.addEventListener('click', handleClose);
+openInfoButton.addEventListener('click', handleOpenInfo);
+closeInfoButton.addEventListener('click', handleCloseInfo);
