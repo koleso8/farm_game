@@ -3,16 +3,16 @@ const closeButton = document.getElementById('liderBoardCloseButton');
 const menu = document.getElementById('liderBoardWrapper');
 const menuList = document.getElementById('menuList');
 const users = [
-  { name: 'GmUjmtrM6aHyPTEJs6GWXUVBG8XTFKPQdNZfLDKUVsoy' },
-  { name: 'GoUSidwGAY5ZDmch6mQppCgvz2ERJan8drH9JMWMhP5K' },
-  { name: 'BiSx4vbuc4D2uEpMHib5f63tL42h6Nndpy7Jnc2MwMBv' },
-  { name: 'CiCuGTuKYP53L7HSKNHX5VgWGeQE2i1WPKMxA58GESF2' },
-  { name: 'EUrZxKi5AYmAnJDBiq3hCqqFYyg84mGdC8msS6yrpWo6' },
-  { name: 'AcyP65mDg8rKCTrb9dUzyzVxJ6BF8fCvjdJ9cRqpdVoD' },
-  { name: '2mqSxxA3t18H5nJ7KpeHcnkuGNRYRQZ3aKYLNhVfDEm1' },
-  { name: 'ArpWiHxGKquR4eST6YiUEdMZvYsCPbBg1UV2zKbQLaso' },
-  { name: '75JcsmfHGqPth5nEFV7ZztxBhkN5tLCg8HhT16eJqaYN' },
-  { name: '4yBaS8rVpAjebHcZ5aqXFAz6BabWgGPSx7ZqBtKYcNBq' },
+  { name: 'GmUj...Vsoy  11.2 SOL' },
+  { name: 'GoUS...hP5K  9.7 SOL' },
+  { name: 'BiSx...wMBv  8.5 SOL' },
+  { name: 'CiCu...ESF2  8.3 SOL' },
+  { name: 'EUrZ...pWo6  4.1 SOL' },
+  { name: 'AcyP...dVoD  3.9 SOL' },
+  { name: '2mqS...DEm1  2.4 SOL' },
+  { name: 'ArpW...Laso  1.1 SOL' },
+  { name: '75Jc...qaYN  0.8 SOL' },
+  { name: '4yBa...cNBq  0.5 SOL' },
 ];
 
 const handleOpen = () => {
